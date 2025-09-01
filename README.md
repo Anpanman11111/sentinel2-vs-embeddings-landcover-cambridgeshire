@@ -32,7 +32,7 @@ This project measured the accuracy and effort needed to perform supervised class
     - Bare (1): 60, 70, 100
     - Water (2): 80, 90
     - Vegetation (3): 10, 20, 30, 40, 95
-  - Generated 200 GCPs with the re-classified ImageCollection using .stratifiedSample(). GCPs were then separated into training and validation gcps at a 70/30 ratio.
+  - Generated 200 GCPs with the re-classified ImageCollection using .stratifiedSample(). GCPs were then separated into training and validation GCPs at a 70/30 ratio.
   - Generated training points by overlaying training GCPs on the median composite using .sampleRegions(). This contains both class and band data for each pixel.
   - Trained the classifier with training points and used it to classify the median composite.
   - Generated validation points by overlaying validation GCPs on the median composite using .sampleRegions().
