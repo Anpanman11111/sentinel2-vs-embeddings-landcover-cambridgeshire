@@ -65,6 +65,7 @@ This project measured the accuracy and effort needed to perform supervised class
 ### For Sentinel-2 Dataset:
 #### Accuracy:
 - Confusion Matrix:
+
 | True\Predicted     | Urban (0) | Bare (1) | Water (2) | Vegetation (3) | **PA** |
 |------------------|-----------|----------|-----------|----------------|-----------------|
 | **Urban (0)**    | 42        | 11       | 1         | 4              | **0.724** |
@@ -72,6 +73,7 @@ This project measured the accuracy and effort needed to perform supervised class
 | **Water (2)**    | 0         | 0        | 61        | 5              | **0.924** |
 | **Vegetation (3)**| 11       | 1        | 3         | 42             | **0.737** |
 | **CA** | **0.724** | **0.818** | **0.938** | **0.824** | **OA = 0.829** |
+
 - Overall Accuracy: 0.829
 
 #### Effort:
