@@ -13,6 +13,8 @@ This project measured the accuracy and effort needed to perform supervised class
 - Google Earth Engine (JavaScript API)
 - Scale: 10, Seed: 42, ee.Classifier.smileRandomForest(50)
 
+
+
 ## Steps:
 ### For Sentinel-2 Dataset:
 - Data Pre-Processing:
@@ -36,7 +38,6 @@ This project measured the accuracy and effort needed to perform supervised class
   - Generated validation points by overlaying validation GCPs on the median composite using .sampleRegions().
   - Used the trained classifier to classify validation points and generated a confusion matrix using .errorMatrix().
 
-
 ### For Satellite Embeddings Dataset:
 - Data Pre-Processing
   - Imported GOOGLE/SATELLITE_EMBEDDING/V1/ANNUAL ImageCollection and filtered it using the AOI geometry and 2021 date. The filtered ImageCollection was then made into a mosaic composite to not alter the embedding values of each pixel.
@@ -47,10 +48,37 @@ This project measured the accuracy and effort needed to perform supervised class
   - Generated validation points by overlaying validation GCPs on the mosaic composite using .sampleRegions().
   - Used the trained classifier to classify validation points and generated a confusion matrix using .errorMatrix().
  
-
-### Exporting the classified composite:
+### Exporting the classified composites:
 - Since GEE doesn't compute anything until an action is triggered (in this case, export), exporting the final classified image of each method separately without any prior heavy computations (adding map layers, matrix calculations, etc.) can act as a proxy for computational effort of each method. 
   - So, to measure computational effort, make the code blocks with [C] markers  next to them into comments, then run the export to measure EECU seconds.
+
+
+
+## Outputs:
+- 2 TIFFs: S2_Classified_Image, Embeddings_Classified_Image
+- 2 PNGs of the composites
+- 2 confusion matrices
+
+
+
+## Results:
+### For Sentinel-2 Dataset:
+#### Accuracy:
+- Confusion Matrix:
+| True\Predicted     | Urban (0) | Bare (1) | Water (2) | Vegetation (3) | **PA** |
+|------------------|-----------|----------|-----------|----------------|-----------------|
+| **Urban (0)**    | 42        | 11       | 1         | 4              | **0.724** |
+| **Bare (1)**     | 5         | 54       | 0         | 0              | **0.915** |
+| **Water (2)**    | 0         | 0        | 61        | 5              | **0.924** |
+| **Vegetation (3)**| 11       | 1        | 3         | 42             | **0.737** |
+| **CA** | **0.724** | **0.818** | **0.938** | **0.824** | **OA = 0.829** |
+- Overall Accuracy: 0.829
+
+#### Effort:
+- Human Effort (Lines of code and task steps): 72 lines of code, 11 steps
+- Computational effort (average batch compute usage in EECU-seconds during export): 40449.826175
+
+
 
 
 
