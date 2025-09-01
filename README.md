@@ -83,7 +83,7 @@ This project measured the accuracy and effort needed to perform supervised class
 
 ### For Satellite Embeddings Dataset:
 #### Accuracy:
-Confusion Matrix:
+- Confusion Matrix:
 
 | True\Predicted    | Urban (0) | Bare (1) | Water (2) | Vegetation (3) | **PA** |
 |------------------|-----------|----------|-----------|----------------|-----------------|
@@ -93,7 +93,7 @@ Confusion Matrix:
 | **Vegetation (3)**| 1        | 1        | 0         | 55             | **0.965** |
 | **CA ** | **0.875** | **0.915** | **1.000** | **0.873** | **OA = 0.917** |
 
-Overall Accuracy: 0.917
+- Overall Accuracy: 0.917
 
 #### Effort:
 - Human Effort (Lines of code and task steps): 50 lines of code, 8 steps
