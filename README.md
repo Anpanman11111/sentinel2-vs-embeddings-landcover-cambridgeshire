@@ -91,7 +91,7 @@ This project measured the accuracy and effort needed to perform supervised class
 | **Bare (1)**     | 5         | 54       | 0         | 0              | **0.915** |
 | **Water (2)**    | 1         | 0        | 62        | 3              | **0.939** |
 | **Vegetation (3)**| 1        | 1        | 0         | 55             | **0.965** |
-| **CA ** | **0.875** | **0.915** | **1.000** | **0.873** | **OA = 0.917** |
+| **CA** | **0.875** | **0.915** | **1.000** | **0.873** | **OA = 0.917** |
 
 - Overall Accuracy: 0.917
 
