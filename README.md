@@ -39,10 +39,10 @@ This project measured the accuracy and effort needed to perform supervised class
   - Used the trained classifier to classify validation points and generated a confusion matrix using .errorMatrix().
 
 ### For Satellite Embeddings Dataset:
-- Data Pre-Processing
+- Data Pre-Processing:
   - Imported GOOGLE/SATELLITE_EMBEDDING/V1/ANNUAL ImageCollection and filtered it using the AOI geometry and 2021 date. The filtered ImageCollection was then made into a mosaic composite to not alter the embedding values of each pixel.
  
-- Supervised Classification (Keeping all parameters the same as above)
+- Supervised Classification (Keeping all parameters the same as above):
   - Used the training and validation GCPs from above to generate training points by overlaying training GCPs on the mosaic composite using .sampleRegions().
   - Trained the classifier with training points and used it to classify the mosaic composite.
   - Generated validation points by overlaying validation GCPs on the mosaic composite using .sampleRegions().
