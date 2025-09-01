@@ -48,7 +48,7 @@ This project measured the accuracy and effort needed to perform supervised class
   - Used the trained classifier to classify validation points and generated a confusion matrix using .errorMatrix().
  
 
-### For Satellite Embeddings Dataset:
+### Exporting the classified composite:
 - Since GEE doesn't compute anything until an action is triggered (in this case, export), exporting the final classified image of each method separately without any prior heavy computations (adding map layers, matrix calculations, etc.) can act as a proxy for computational effort of each method. 
   - So, to measure computational effort, make the code blocks with [C] markers  next to them into comments, then run the export to measure EECU seconds.
 
