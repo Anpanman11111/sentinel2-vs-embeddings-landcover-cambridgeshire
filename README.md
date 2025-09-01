@@ -72,7 +72,7 @@ This project measured the accuracy and effort needed to perform supervised class
 | **Bare (1)**     | 5         | 54       | 0         | 0              | **0.915** |
 | **Water (2)**    | 0         | 0        | 61        | 5              | **0.924** |
 | **Vegetation (3)**| 11       | 1        | 3         | 42             | **0.737** |
-| **CA** | **0.724** | **0.818** | **0.938** | **0.824** | **OA = 0.829** |
+| **UA** | **0.724** | **0.818** | **0.938** | **0.824** | **OA = 0.829** |
 
 - Overall Accuracy: 0.829
 
@@ -91,7 +91,7 @@ This project measured the accuracy and effort needed to perform supervised class
 | **Bare (1)**     | 5         | 54       | 0         | 0              | **0.915** |
 | **Water (2)**    | 1         | 0        | 62        | 3              | **0.939** |
 | **Vegetation (3)**| 1        | 1        | 0         | 55             | **0.965** |
-| **CA** | **0.875** | **0.915** | **1.000** | **0.873** | **OA = 0.917** |
+| **UA** | **0.875** | **0.915** | **1.000** | **0.873** | **OA = 0.917** |
 
 - Overall Accuracy: 0.917
 
@@ -102,7 +102,7 @@ This project measured the accuracy and effort needed to perform supervised class
 
 
 ## Conclusion:
-- It could be seen that AI Satellite Embeddings yielded higher overall accuracy (OA 0.917 vs. 0.829) and higher reliability (higher CA for all classes), while also reducing both human effort (fewer lines of code and steps) and computational effort (an order of magnitude lower EECU-seconds). 
+- It could be seen that AI Satellite Embeddings yielded higher overall accuracy (OA 0.917 vs. 0.829) and higher reliability (higher UA for all classes), while also reducing both human effort (fewer lines of code and steps) and computational effort (an order of magnitude lower EECU-seconds). 
 - These findings mean that AI-integrated datasets can help streamline workflows of land cover classification projects by reducing data-preprocessing requirements. However, traditional datasets and workflows remain valuable when data interpretability is needed. Indices, such as NDVI, NDBI, and MNDWI used above, have clear physics and provide physical explanations that pure embedding-based approaches can’t fully replace yet.
 - It is important to run this analysis (or a more rigorous version of it) over multiple regions with different land compositions and sizes before drawing broader conclusions about the general applicability of these findings.
 
