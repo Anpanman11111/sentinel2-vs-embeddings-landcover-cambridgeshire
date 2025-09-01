@@ -81,6 +81,39 @@ This project measured the accuracy and effort needed to perform supervised class
 - Computational effort (average batch compute usage in EECU-seconds during export): 40449.826175
 
 
+### For Satellite Embeddings Dataset:
+#### Accuracy:
+Confusion Matrix:
+
+| True\Predicted    | Urban (0) | Bare (1) | Water (2) | Vegetation (3) | **PA** |
+|------------------|-----------|----------|-----------|----------------|-----------------|
+| **Urban (0)**    | 49        | 4        | 0         | 5              | **0.845** |
+| **Bare (1)**     | 5         | 54       | 0         | 0              | **0.915** |
+| **Water (2)**    | 1         | 0        | 62        | 3              | **0.939** |
+| **Vegetation (3)**| 1        | 1        | 0         | 55             | **0.965** |
+| **CA ** | **0.875** | **0.915** | **1.000** | **0.873** | **OA = 0.917** |
+
+Overall Accuracy: 0.917
+
+#### Effort:
+- Human Effort (Lines of code and task steps): 50 lines of code, 8 steps
+- Computational effort (average batch compute usage in EECU-seconds during export): 4656.059125
+
+
+
+## Conclusion:
+- It could be seen that AI Satellite Embeddings yielded higher overall accuracy (OA 0.917 vs. 0.829) and higher reliability (higher CA for all classes), while also reducing both human effort (fewer lines of code and steps) and computational effort (an order of magnitude lower EECU-seconds). 
+- These findings mean that AI-integrated datasets can help streamline workflows of land cover classification projects by reducing data-preprocessing requirements. However, traditional datasets and workflows remain valuable when data interpretability is needed. Indices, such as NDVI, NDBI, and MNDWI used above, have clear physics and provide physical explanations that pure embedding-based approaches can’t fully replace yet.
+- It is important to run this analysis (or a more rigorous version of it) over multiple regions with different land compositions and sizes before drawing broader conclusions about the general applicability of these findings.
+
+
+
+## Notes:
+- TIFF and PNG outputs are included in a separate folder.
+- JavaScript code from GEE code editor is given in GEE_code.js file.
+- The lines of code and steps for Satellite Embeddings Dataset also include the FeatureCollection, Filtering, and GCPs steps that were re-used. The lines of code for both methods do not include the exports.
+- This project is licensed under the MIT License.
+
 
 
 
